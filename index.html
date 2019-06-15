@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <head>
+  <title>Kulwant Yadav</title>
+  <meta name="description" content="">
+   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular.min.js"></script>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.9/angular-route.js"></script>
+  <link rel="stylesheet" media="screen and (min-width: 601px)" href="app.css">
+<link rel="stylesheet" media="screen and (max-width: 600px)" href="app-mobile.css">
+</head>
+<body ng-app="myApp">
+
+<div class="menu_div">
+  <ul class="menu">
+    <li><a href="#!home">Home</a></li>
+    <li><a href="#!projects">Projects</a></li>
+    <li><a href="#!education">Education</a></li>
+    <li><a href="#!certifications">Certifications</a></li>  
+  </ul>
+</div>
+ 
+  <div ng-view class="mainview"></div>
+  
+  
+      <div class="footer_img_container">
+        <a href="https://www.linkedin.com/in/kulwantyadav/" target="_blank"><img src="/assets/linkedin.png" class="footer_img"></a>
+      </div>  
+  <div class="footer"><span></span>© 2019 Kulwant Singh Yadav</div>
+
+
+  <script>
+    var app = angular.module("myApp", ["ngRoute"]);
+    app.config(function($routeProvider) {
+      $routeProvider
+      .when("/", {
+          templateUrl : "home/home.html"
+      })
+      .when("/home", {
+          templateUrl : "home/home.html"
+      })
+      .when("/projects", {
+          templateUrl : "projects.html"
+      })
+      .when("/education", {
+          templateUrl : "education.html"
+      })
+      .when("/certifications", {
+          templateUrl : "certifications.html"
+      });
+    });
+  </script>
+
+  </div>
+</body>
+</html>
