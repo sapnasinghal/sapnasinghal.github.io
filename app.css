@@ -118,7 +118,7 @@ img {
   background-image: url("/assets/hero.jpg");
   background-size: cover;
   background-repeat: no-repeat;
-  background-position: left;
+  background-position: right;
 
 }
 .skills {
@@ -127,7 +127,7 @@ img {
   left: 60%;
   transform: translate(-30%, -50%);
   -ms-transform: translate(-50%, -50%);*/
-  float: right;
+  float: left;
   width: 50%;
   text-align: center;
   margin-top: 50px;
